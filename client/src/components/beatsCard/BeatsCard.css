@@ -1,0 +1,18 @@
+.text-color{
+    color: rgb(148, 141, 141);
+}
+.text-color:hover{
+    text-decoration: underline;
+}
+.cartplus{
+    font-size: 25px;
+    text-decoration: underline;
+    color :rgb(207, 204, 204);
+}
+.cartplus:hover{
+    text-decoration: underline;
+    color : white;
+}
+.beat-title:hover{
+    text-decoration: underline;
+}

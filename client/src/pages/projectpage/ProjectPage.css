@@ -1,0 +1,177 @@
+
+
+  .custom-font {
+    font-family: "Roboto Slab", serif;
+  }
+  .food {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  .gridmusic {
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  }
+  @media (max-width: 576px) {
+    .gridmusic{
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+  }
+  @media (max-width: 1200px) {
+    .gridmusic{
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    }
+  }
+  @media (max-width: 992px) {
+    .gridmusic{
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    }
+  }
+  @media (max-width: 767px) {
+    .gridmusic{
+        grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    }
+  }
+  @media (max-width: 350px) {
+    .gridmusic{
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+  }
+  .project-bg{
+    background-color: #0f0f0d;
+  }
+  .bg-color:hover{
+    cursor: pointer;
+    background-color:purple;
+   
+
+  }
+.filter{
+    margin: 20px;
+}
+.list{
+    border: 0.5px solid white;
+    height: 30px;
+    width: 35px;
+    font-size: 17px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-bottom: 2px;
+    cursor: pointer;
+    color: rgb(105, 105, 105);
+    
+}
+/* .list:hover{
+    opacity: 1;
+    color: purple;
+    border-color: purple;
+} */
+.heart{
+    font-size: 20px;
+}
+.heart:hover{
+    color: purple;
+    cursor: pointer;
+    
+}
+
+.musiccardwidth2{
+  width: auto;
+  display: inline-block;
+  margin: auto;
+  padding: 5px;
+  text-decoration: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+/* @media (max-width: 400px) {
+.musiccardwidth2{
+  width: auto;
+  margin: auto;
+ 
+}
+} */
+.musiccardwidth1:hover{
+  background-color: purple;
+  /* background-color: rgb(85, 84, 84); */
+  cursor: pointer;
+}
+.musiccardwidth2:hover{
+  background-color: purple;
+  /* background-color: rgb(85, 84, 84); */
+  cursor: pointer;
+}
+.card-img-top{
+  border-radius: 10px;
+  height: 200px;
+}
+.photo {
+height: 150px;
+width: 150px;
+}
+.play-button-overlay {
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0.4; /* Initially hidden */
+transition: opacity 0.3s ease-in-out;
+}
+
+.play-button {
+color: white;
+background-color: rgba(0, 0, 0, 0.7);
+border-radius: 50%;
+padding: 15px;
+cursor: pointer;
+text-align: center;
+top: 35%;
+left: 50%;
+border: none;
+}
+
+.play-button-overlay:hover {
+opacity: 1;
+
+}
+.music-player-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons{
+  font-size: 0px;
+  border: none;
+  background-color: transparent;
+  margin-left: 100%;
+  
+  
+}
+.icons1{
+  font-size: 0px;
+  border: none;
+  background-color: transparent;
+  margin-left: 10%;
+  
+  
+}
+.size{
+  font-size: 25px;
+  margin-top: 2px;
+}
+.anghami{
+  font-size: 50px;
+}
+/* ProjectPage.css */
+.bi.bi-list.active,
+.bi.bi-grid-fill.active {
+  color: white;
+}
+

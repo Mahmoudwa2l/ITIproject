@@ -1,0 +1,20 @@
+.btn-p {
+  width: 100%;
+}
+.gridmusic {
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+.learnmore{
+  text-decoration: none;
+  color: white;
+  
+  cursor: pointer;
+  
+  
+}
+.learnmore:hover{
+  
+  text-decoration: underline;
+  
+
+}

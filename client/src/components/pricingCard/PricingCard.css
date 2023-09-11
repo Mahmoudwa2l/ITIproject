@@ -1,0 +1,20 @@
+.pricing-bg{
+    
+    background-color: #0A0A09;
+}
+.btn-color{
+    background-color: rgb(238, 112, 238);
+}
+.btn-color {
+    color: white;
+    background-color: rgb(187, 69, 187);
+}
+.btn-color:hover{
+    background-color:rgb(160, 25, 160);
+}
+.card-color{
+    background-color: purple;
+}
+/* .pricing-bg{
+    background-image: linear-gradient(to bottom right, black, grey);
+} */

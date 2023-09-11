@@ -1,0 +1,32 @@
+.imgheight{
+    height: 700px;
+}
+@media (max-width: 600px) {
+    .imgheight{
+        /* height: 300px;
+        width: 60%;
+        margin-left: 15%; */
+        height: 0px;
+        width: 0px;
+    }
+  }
+.bg-about{
+    background-image: linear-gradient(to right, rgb(44, 4, 44), rgb(75, 6, 75), rgb(61, 3, 61), black, rgb(43, 2, 43), black, black);
+}
+@media (max-width: 600px) {
+    .bg-about{
+        background-image: linear-gradient(to right, rgb(36, 5, 36), rgb(32, 3, 32), rgb(32, 5, 32), black, rgb(43, 2, 43), black, black);
+    }
+  }
+.explore-btn{
+    width: 300px;
+    height: 50px;
+    border-color: purple;
+    color: rgb(243, 74, 243);
+}
+.explore-btn:hover{
+    background-color: purple;
+    border-color: purple;
+    color: white;
+    
+}
