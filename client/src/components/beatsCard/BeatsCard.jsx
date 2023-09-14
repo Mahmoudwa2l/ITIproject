@@ -25,8 +25,9 @@ function BeatsCard({ beats ,addToCart }) {
         </div>
         <h6 className="card-title track-title">{beats.beatname}</h6>
         <div className="row">
-          <div className="col-10 ">
+          <div className="d-flex flex-row justify-content-between">
             <span className="card-text text-color">{beats.artist}</span>
+            <span className="card-text text-color">Details</span>
           </div>
           
         </div>

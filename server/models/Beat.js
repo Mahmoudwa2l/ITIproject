@@ -10,6 +10,11 @@ const BeatSchema = new mongoose.Schema(
             type:String,
             max:500
         },
+        title:{
+            type:String,
+            required:true,
+            unique:true
+        },
         img:{
             type:String,
 
@@ -17,6 +22,10 @@ const BeatSchema = new mongoose.Schema(
         likes:{
             type:Array,
             default:[]
+        },
+        price: {
+            type:Number, 
+            required:true
         }
     },
     {timestamps:true}
