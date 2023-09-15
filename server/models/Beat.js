@@ -10,6 +10,10 @@ const BeatSchema = new mongoose.Schema(
             type:String,
             max:500
         },
+        author:{
+            type:String,
+            max:500
+        },
         title:{
             type:String,
             required:true,

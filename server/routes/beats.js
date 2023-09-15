@@ -73,12 +73,11 @@ router.get("/:id" , async(req,res) =>{
 
 //get all beats
 
-router.get("/all",async(req,res)=>{
-    let beatArray = [];
+router.get("/",async(req,res)=>{
     try{
-        /* const allBeats = await Promise.all() */
+        
         const allBeats = await Beat.find();
-        res.json(allBeats);
+        res.status(200).json(allBeats);
 
     }catch(err){
         res.status(500).json(err);

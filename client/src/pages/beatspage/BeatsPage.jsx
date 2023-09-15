@@ -3,11 +3,36 @@ import './BeatsPage.css';
 import { BeatsCard, BeatsCardListed} from "../../components/index";
 import { beats } from "../../data/beats";
 /* import { tracks } from "../../data/tracks"; */
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
+/* const axios = require('axios'); */
 
 function BeatsPage() {
     const [currentView, setCurrentView] = useState("list");
+    const [beats, setBeats] = useState([]);
+    const [error, setError] = useState(null);
+    useEffect(() => {
+      const getBeats = async () => {
+        try {
+          const response = await axios.get("http://localhost:8800/api/beats");
+  
+          if (response.status === 200) {
+            setBeats(response.data);
+          } else {
+            setError(`Request failed with status ${response.status}`);
+          }
+        } catch (error) {
+          // Handle errors here
+          setError(error.message || "An error occurred while fetching beats.");
+        }
+      };
+  
+      getBeats();
+    }, []);
+
+
+
+
 
 const ListProject = () => {
     return (
@@ -24,6 +49,7 @@ const ListProject = () => {
 const WrapProject = () => {
     return (
       <>
+        
         <div className="row">
           <div className="col-md-4 col-lg custommargin d-grid gridmusic food mt-5">
             {beats.map((b) => (
