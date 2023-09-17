@@ -33,7 +33,7 @@ function Beats() {
 
   return (
     <div className=" bg-dark custom-beats-bg pb-5 pt-5">
-      <div className="container">
+      <div className="container-fluid custom-pad">
         <div className="text-white d-flex justify-content-between">
           <h1 className=" mb-2">Beats</h1>
           <NavLink to='/beats' className='text-white learnmore'>See More</NavLink>

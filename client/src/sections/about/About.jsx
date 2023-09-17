@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function About() {
   return (
     <section className="py-3 py-md-5 py-xl-8 bg-about text-white">
-      <div className="container">
+      <div className="container-fluid custom-pad">
         <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
           <div className="col-12 col-lg-6">
             <img className="img-fluid rounded imgheight" loading="lazy" src="assets/qualityrecords.jpeg" alt="" />

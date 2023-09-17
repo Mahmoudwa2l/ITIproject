@@ -10,7 +10,7 @@ function NavBar({ adminnavbar }) {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark navbar-bg">
-          <div className="container">
+          <div className="container-fluid custom-pad">
             <NavLink to="/" className="navbar-brand">
               {" "}
               Unity Studios{" "}

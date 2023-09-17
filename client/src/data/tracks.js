@@ -40,6 +40,22 @@ export const tracks = [
     slinkpotifylink: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
     linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
   },
+  {
+    photo:'assets/MATADOR.png',
+    song:'Ana b3eed',
+    artist: 'Burhan',
+    linkyoutube: 'https://www.youtube.com/@selta1/videos',
+    slinkpotifylink: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
+    linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
+  },
+  {
+    photo:'assets/MATADOR.png',
+    song:'Ana b3eed',
+    artist: 'Burhan',
+    linkyoutube: 'https://www.youtube.com/@selta1/videos',
+    slinkpotifylink: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
+    linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
+  },
   /* {
     photo:photo5,
     song:'Ana b3eed',

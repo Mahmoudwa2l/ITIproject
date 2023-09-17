@@ -2,9 +2,9 @@ import './Features.css'
 import { ServiceCard } from '../../components/index'
 function Features() {
   return (
-    <div className="container-fluid fbg text-white">
+    <div className="container-fluid fbg text-white custom-pad">
 
-    <div className="container px-4 py-5" id="featured-3">
+    <div className="container-fluid  px-4 py-5" id="featured-3">
       <h1 className="pb-2 text-center">Our Services</h1>
       <div className="row g-5 py-5 row-cols-1 row-cols-lg-3">
         <ServiceCard 

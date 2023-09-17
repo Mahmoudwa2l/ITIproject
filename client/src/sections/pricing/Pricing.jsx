@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Pricing() {
   return (
     <div className="container-fluid pricing-bg p-5">
-      <div className="container text-white d-flex flex-column">
+      <div className="container-fluid custom-pad text-white d-flex flex-column">
         
         <div className="h1 p-5 text-center">A perfect fit for every one</div>
 

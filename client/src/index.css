@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.custom-pad {
+  /* Default padding values for smaller screens */
+  padding-left: 2;
+  padding-right: 2;
+}
+
+/* Media query for screens larger than 768px */
+@media screen and (min-width: 769px) {
+  .custom-pad {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}

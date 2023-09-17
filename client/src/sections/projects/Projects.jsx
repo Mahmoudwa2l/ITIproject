@@ -5,7 +5,7 @@ import { tracks } from "../../data/tracks";
 function Projects() {
   return (
     <div className=" bg-dark custom-gradient-bg pb-5 pt-5">
-      <div className="container">
+      <div className="container-fluid custom-pad">
         <div className="text-white d-flex justify-content-between">
           <h1 className=" mb-2">Projects</h1>
           
@@ -14,7 +14,7 @@ function Projects() {
 
         <div className="container-lg scrollmenu">
           {tracks.map((t) => (
-            <div className="card musiccardwidth1 ">
+            <div className="card musiccardwidth1 ms-2 mt-2 ">
               <MusicCard track={t} />
             </div>
           ))}
