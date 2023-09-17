@@ -3,9 +3,9 @@ import PauseCircleFilledIcon from "@mui/icons-material/PauseCircleFilled"; */
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./MusicCard.css";
-import anghami_icon from "../../assets/anghami3.png";
+/* import anghami_icon from "http://localhost:3000/assets/anghami3.png"; */
 /* import React, { useState, useRef } from 'react'; */
-import music from "../../assets/MARWAN_PABLO_-_RACORE.mp3";
+/* import music from "http://localhost:3000/assets/MARWAN_PABLO_-_RACORE.mp3"; */
 import AudioPlayer from "../audioplayer/AudioPlayer";
 function MusicCard({ track }) {
 /*   const audioRef = useRef(null);
@@ -30,7 +30,7 @@ function MusicCard({ track }) {
       <div className="card-img-top">
         <img className="card-img-top" src={track.photo} alt="" />
         <div className="play-button-overlay d-flex align-items-center">
-          <AudioPlayer music={music}/>
+          <AudioPlayer music="assets/MARWAN_PABLO_-_RACORE.mp3"/>
         </div>
       </div>
       <div className="card-body text-white">
@@ -57,7 +57,7 @@ function MusicCard({ track }) {
               className="icons "
               onClick={() => openLink(track.linkanghami)}
             >
-              <img className="anghami text-white " src={anghami_icon} alt="" />
+              <img className="anghami text-white " src="assets/anghami3.png" alt="" />
             </button>
           </div>
         </div>

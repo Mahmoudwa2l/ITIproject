@@ -47,16 +47,16 @@ function NavBar({ adminnavbar }) {
                     Pricing
                   </NavLink>
                 </li>
-                <li class="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle"
                     href="#1"
                     role="button"
                     data-bs-toggle="dropdown"
                   >
                     Coures
                   </a>
-                  <ul class="dropdown-menu">
+                  <ul className="dropdown-menu">
                     <li>
                       <NavLink className="courses" to="/mix-master">
                         Mix and Master
@@ -87,12 +87,12 @@ function NavBar({ adminnavbar }) {
                 <NavLink className="btn  ms-2 colo" to="/singin">
                   Login
                 </NavLink>
-                <div class="dropdown">
+                <div className="dropdown">
                   <NavLink to="/checkout">
-                    <i class="bi bi-cart cart"></i>
+                    <i className="bi bi-cart cart"></i>
                   </NavLink>
                   
-                  <div class="dropdown-content bg-dark text-white">
+                  <div className="dropdown-content bg-dark text-white">
                     <p>Cart is empty</p><br />
                     {/* <p>When you add somthing it will appear here</p> */}
                   </div>

@@ -1,13 +1,13 @@
 import './About.css';
 import { NavLink } from "react-router-dom";
-import photreq from '../../assets/quality records.jpeg';
+/* import photreq from 'http://localhost:3000/assets/qualityrecords.jpeg'; */
 function About() {
   return (
     <section className="py-3 py-md-5 py-xl-8 bg-about text-white">
       <div className="container">
         <div className="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
           <div className="col-12 col-lg-6">
-            <img className="img-fluid rounded imgheight" loading="lazy" src={photreq} alt="" />
+            <img className="img-fluid rounded imgheight" loading="lazy" src="assets/qualityrecords.jpeg" alt="" />
           </div>
           <div className="col-12 col-lg-6">
             <div className="row justify-content-xl-center">

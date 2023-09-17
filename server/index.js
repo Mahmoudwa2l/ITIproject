@@ -37,11 +37,13 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use(cors());
+/* app.use(cors()); */
 
 app.use("/api/users" , userRoute);
 app.use("/api/auth" , authRoute);
 app.use("/api/beats" , beatRoute);
+
+
 
 app.listen(8800, () => {
   console.log("backend server is running!");

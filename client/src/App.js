@@ -40,12 +40,13 @@ function App() {
           <Route path="/projects" element={<ProjectPage />} />
           <Route path="/beats" element={<BeatsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/singin" element={<SignIn />} />
+          
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/cart" element={<Cart />} /> 
           <Route path="*" element={<PageNotFound />} />
         </Route>
+        <Route path="/singin" element={<SignIn />} />
       </Routes>
     </>
   );

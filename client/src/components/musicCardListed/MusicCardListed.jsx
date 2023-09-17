@@ -1,10 +1,10 @@
 import "./MusicCardListed.css";
 import React, { useEffect } from 'react';
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import anghami_icon from "../../assets/anghami3.png";
+/* import anghami_icon from "http://localhost:3000/assets/anghami3.png"; */
 import { NavLink } from "react-router-dom";
-/* import AudioPlayer from "../audioplayer/AudioPlayer";
-import music from "../../assets/MARWAN_PABLO_-_RACORE.mp3"; */
+/* import AudioPlayer from "../audioplayer/AudioPlayer"; */
+/* import music from "http://localhost:3000/assets/MARWAN_PABLO_-_RACORE.mp3"; */
 function MusicCardListed({ track }) {
     useEffect(() => {
         const onRouteChange = () => {
@@ -22,7 +22,7 @@ function MusicCardListed({ track }) {
   return (
     <div className="wrapper  d-flex flex-row justify-content-between align-items-center mb-4 ms-3 ">
       <div className="song d-flex flex-row text-white align-items-center">
-        {/* <AudioPlayer music={music}/> */}
+        {/* <AudioPlayer music="assets/MARWAN_PABLO_-_RACORE.mp3"/> */}
         <img className="photo1" src={track.photo} alt="" />
         <div className="title d-flex flex-column ms-3">
           <div className="songname">{track.song}</div>
@@ -38,7 +38,7 @@ function MusicCardListed({ track }) {
           <i className="bi bi-spotify text-success size ms-4 "></i>
         </NavLink>
         <NavLink to={track.linkanghami} target="_blank">
-          <img className="anghami text-white ms-4" src={anghami_icon} alt="" />
+          <img className="anghami text-white ms-4" src="assets/anghami3.png" alt="" />
         </NavLink>
       </div>
     </div>

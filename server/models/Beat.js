@@ -6,10 +6,6 @@ const BeatSchema = new mongoose.Schema(
             type:String,
             required:true,
         },
-        desc:{
-            type:String,
-            max:500
-        },
         author:{
             type:String,
             max:500
@@ -21,7 +17,6 @@ const BeatSchema = new mongoose.Schema(
         },
         img:{
             type:String,
-
         },
         likes:{
             type:Array,

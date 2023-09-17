@@ -1,55 +1,39 @@
-import './BeatsPage.css';
+import "./BeatsPage.css";
 
-import { BeatsCard, BeatsCardListed} from "../../components/index";
-import { beats } from "../../data/beats";
-/* import { tracks } from "../../data/tracks"; */
-import React, { useEffect, useState } from 'react';
+import { BeatsCard, BeatsCardListed } from "../../components/index";
+
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-/* const axios = require('axios'); */
 
 function BeatsPage() {
-    const [currentView, setCurrentView] = useState("list");
-    const [beats, setBeats] = useState([]);
-    const [error, setError] = useState(null);
-    useEffect(() => {
-      const getBeats = async () => {
-        try {
-          const response = await axios.get("http://localhost:8800/api/beats");
-  
-          if (response.status === 200) {
-            setBeats(response.data);
-          } else {
-            setError(`Request failed with status ${response.status}`);
-          }
-        } catch (error) {
-          // Handle errors here
-          setError(error.message || "An error occurred while fetching beats.");
-        }
-      };
-  
-      getBeats();
-    }, []);
+  const [currentView, setCurrentView] = useState("list");
+  const [beats,setBeats] = useState([])
 
-
-
-
-
-const ListProject = () => {
+  useEffect(()=>{
+    const fetchBeats = async ()=>{
+      const res = await axios.get("beats");
+      console.log(res.data);
+      setBeats(res.data)
+    };
+    fetchBeats();
+  },[])
+  const ListProject = () => {
     return (
       <div className="row">
         <div className="d-flex flex-column">
           {beats.map((b) => (
             <BeatsCardListed beats={b} />
           ))}
+
+
         </div>
       </div>
     );
   };
 
-const WrapProject = () => {
+  const WrapProject = () => {
     return (
       <>
-        
         <div className="row">
           <div className="col-md-4 col-lg custommargin d-grid gridmusic food mt-5">
             {beats.map((b) => (
@@ -57,21 +41,21 @@ const WrapProject = () => {
                 <BeatsCard beats={b} />
               </div>
             ))}
+
+
           </div>
         </div>
       </>
     );
   };
 
-const handleViewChange = (view) => {
+  const handleViewChange = (view) => {
     setCurrentView(view);
   };
 
-
   return (
     <>
-    
-    <div className="container-fluid project-bg pt-5">
+      <div className="container-fluid project-bg pt-5">
         <div className="container-sm d-flex flex-column ">
           <div className="h1 text-center text-white mb-4">Beats</div>
 
@@ -81,7 +65,6 @@ const handleViewChange = (view) => {
             </div>
 
             <div className="view d-flex flex-row justify-content-center align-items-center">
-            
               <div
                 className={`bi bi-list list ms-3 ${
                   currentView === "list" ? "active" : ""
@@ -99,11 +82,8 @@ const handleViewChange = (view) => {
           {currentView === "list" ? <ListProject /> : <WrapProject />}
         </div>
       </div>
-    
-    
-    
     </>
-  )
+  );
 }
 
-export default BeatsPage
+export default BeatsPage;

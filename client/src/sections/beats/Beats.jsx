@@ -1,10 +1,12 @@
 import './Beats.css';
 import { BeatsCard  } from '../../components/index';
-import { beats } from "../../data/beats";
+/* import { beats } from "../../data/beats"; */
 import { NavLink, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import React, { useState } from 'react';
 import {Cart} from '../../pages/index';
+
+import axios from "axios";
 function Beats() {
   const location = useLocation();
 
@@ -13,7 +15,16 @@ function Beats() {
     window.scrollTo(0, 0);
   }, [location]);
 
+  const [beats,setBeats] = useState([])
 
+  useEffect(()=>{
+    const fetchBeats = async ()=>{
+      const res = await axios.get("beats");
+      console.log(res.data);
+      setBeats(res.data)
+    };
+    fetchBeats();
+  },[])
  const [cart, setCart] = useState([]);
 
   const addToCart = (beats) => {
