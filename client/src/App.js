@@ -1,6 +1,4 @@
-// App.js
 import { Outlet, Route, Routes } from "react-router-dom";
-import React, { useState } from 'react';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home,

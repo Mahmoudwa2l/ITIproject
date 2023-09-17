@@ -23,16 +23,16 @@ function Footer({adminFooter}) {
               <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Unity Studios</h6>
                 <p>
-                  <a href="#" className="text-white">Projects</a>
+                  <a href="#1" className="text-white">Projects</a>
                 </p>
                 <p>
-                  <a href="#" className="text-white">Pricing</a>
+                  <a href="#1" className="text-white">Pricing</a>
                 </p>
                 <p>
-                  <a href="#" className="text-white">About us</a>
+                  <a href="#1" className="text-white">About us</a>
                 </p>
                 <p>
-                  <a href="#" className="text-white">Contact us</a>
+                  <a href="#1" className="text-white">Contact us</a>
                 </p>
               </div>
               {/* Grid column */}
@@ -43,16 +43,16 @@ function Footer({adminFooter}) {
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
                 <p>
-                  <a href="#" className="text-white">Mics</a>
+                  <a href="#1" className="text-white">Mics</a>
                 </p>
                 <p>
-                  <a href="#" className="text-white">Speakers</a>
+                  <a href="#1" className="text-white">Speakers</a>
                 </p>
                 <p>
-                  <a href="#" className="text-white">Lights</a>
+                  <a href="#1" className="text-white">Lights</a>
                 </p>
                 <p>
-                  <a href="#" className="text-white">Chair</a>
+                  <a href="#1" className="text-white">Chair</a>
                 </p>
               </div>
               {/* Grid column */}
@@ -63,10 +63,10 @@ function Footer({adminFooter}) {
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">Projects</h6>
                 <p>
-                  <a href="#" className="text-white">Tracks</a>
+                  <a href="#1" className="text-white">Tracks</a>
                 </p>
                 <p>
-                  <a href="#" className="text-white">Beats</a>
+                  <a href="#1" className="text-white">Beats</a>
                 </p>
              
               </div>
