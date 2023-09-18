@@ -9,9 +9,9 @@ import {
   PageNotFound,
   AboutPage,
   BeatsPage,
+  Cart,
 } from "./pages/index"; // Import your pages
 import { Footer, NavBar } from "./components";
-import Cart from "./pages/cart/Cart" // Import the Cart component
 
 const queryClient = new QueryClient();
 

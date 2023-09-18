@@ -46,7 +46,7 @@ function Beats() {
             </div>
           ))}
         </div>
-        <Cart cartItems={cart} />
+       
       </div>
     </div>
   );

@@ -88,7 +88,7 @@ function NavBar({ adminnavbar }) {
                   Login
                 </NavLink>
                 <div className="dropdown">
-                  <NavLink to="/checkout">
+                  <NavLink to="/cart">
                     <i className="bi bi-cart cart"></i>
                   </NavLink>
                   
