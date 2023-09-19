@@ -10,6 +10,7 @@ import {
   AboutPage,
   BeatsPage,
   Cart,
+  SingleBeatPage,
 } from "./pages/index"; // Import your pages
 import { Footer, NavBar } from "./components";
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/cart" element={<Cart />} /> 
+          <Route path="/beat" element={<SingleBeatPage />} /> 
           <Route path="*" element={<PageNotFound />} />
         </Route>
         <Route path="/singin" element={<SignIn />} />

@@ -4,7 +4,6 @@ import { BeatsCard  } from '../../components/index';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import React, { useState } from 'react';
-import {Cart} from '../../pages/index';
 
 import axios from "axios";
 function Beats() {

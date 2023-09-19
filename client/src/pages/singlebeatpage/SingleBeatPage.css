@@ -1,0 +1,60 @@
+/* Default styles for large screens */
+.wrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #0A0A09;
+    padding-bottom: 40px;
+}
+
+.leftbeatinfo {
+    margin-right: 3rem;
+    padding: 2rem;
+    width: 25%;
+    background-color: #141414;
+    color: white;
+    border-radius: 10px;
+}
+
+.rightbeatinfo {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.info1,
+.info2,
+.info3 {
+    padding: 2rem;
+    background-color: #141414;
+    margin-top: 20px; /* Reduce margin for smaller screens */
+    border-radius: 10px;
+    color: white;
+}
+
+.titleinfo3 {
+    padding-bottom: 1rem; /* Reduce padding for smaller screens */
+}
+
+/* Media query for screens smaller than a certain width (adjust the max-width as needed) */
+@media (max-width: 1371px) {
+    .wrapper1 {
+        flex-direction: column; /* Change the flex direction for smaller screens */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .leftbeatinfo {
+        width: 100%; /* Make the leftbeatinfo div take up full width on smaller screens */
+        margin-right: 0; /* Remove the right margin on smaller screens */
+    }
+    .rightbeatinfo{
+        width: 100%;
+    }
+
+    .info1,
+    .info2,
+    .info3 {
+        margin-top: 10px; /* Further reduce margin for smaller screens */
+    }
+}

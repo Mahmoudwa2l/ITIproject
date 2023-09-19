@@ -5,14 +5,15 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 /* import React, { useState, useRef } from 'react'; */
 /* import music from "../../assets/MARWAN_PABLO_-_RACORE.mp3";
 import AudioPlayer from "../audioplayer/AudioPlayer"; */
-
+import { NavLink } from 'react-router-dom';
 import AudioPlayer from "../audioplayer/AudioPlayer";
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 function BeatsCard({ beats ,addToCart }) {
     
   return (
     <>
-      <div className="card-img-top">
+    <NavLink to="/beat" className="beatcard">
+    <div className="card-img-top">
         <img className="card-img-top" src={PF + beats.img} alt="" />
         <div className="play-button-overlay d-flex align-items-center">
           <AudioPlayer music="assets/MARWAN_PABLO_-_RACORE.mp3"/>
@@ -28,13 +29,19 @@ function BeatsCard({ beats ,addToCart }) {
         <div className="row">
           <div className="d-flex flex-row justify-content-between">
             <span className="card-text text-color">{beats.author}</span>
-            <span className="card-text text-color">Details</span>
+          {/*   <NavLink to="/beat" className="card-text text-color">Details</NavLink> */}
+            
           </div>
           
         </div>
         
         
       </div>
+
+
+
+    </NavLink>
+      
       
     </>
   )

@@ -8,6 +8,7 @@ const morgan = require("morgan");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const beatRoute = require("./routes/beats");
+const cartRoute = require("./routes/cart");
 const multer = require("multer");
 const path = require("path");
 
@@ -57,11 +58,11 @@ app.post("/api/upload",upload.single("file") , (req,res) =>{
     console.log(err);
   }
 });
-/* app.use(cors()); */
 
 app.use("/api/users" , userRoute);
 app.use("/api/auth" , authRoute);
 app.use("/api/beats" , beatRoute);
+app.use("/api/cart" , cartRoute);
 
 
 

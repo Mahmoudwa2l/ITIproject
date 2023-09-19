@@ -1,8 +1,12 @@
 .text-color{
     color: rgb(148, 141, 141);
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 .text-color:hover{
     text-decoration: underline;
+    
 }
 .cartplus{
     font-size: 25px;
@@ -15,4 +19,7 @@
 }
 .beat-title:hover{
     text-decoration: underline;
+}
+.beatcard{
+    text-decoration: none;
 }
