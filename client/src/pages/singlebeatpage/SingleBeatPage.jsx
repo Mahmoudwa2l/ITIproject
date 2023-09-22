@@ -16,12 +16,23 @@ function SingleBeatPage() {
   return (
     <div className="contaier-fluid custom-pad pt-4 wrapper1">
       <div className="leftbeatinfo text-center">
-        <h4>test 1</h4>
+        <img className ="imagesingle" src="assets/MATADOR.png" alt="" />
     </div>
 
       <div className="rightbeatinfo">
         <div className="info1">
-            <h4>Producer</h4>
+            <div className="d-flex flex-row justify-content-between align-items-center">
+              <h4>Producer</h4>
+              <div className="d-flex flex-row align-items-center">
+                <h4 className="me-3">price</h4>
+                <div className="cart btn text-white bg-primary d-flex flex-row align-items-center">
+                  <i class="bi bi-cart-plus-fill me-2"></i>
+                  <h4 className="fs-5 mt-2">Add to Cart</h4>
+
+                </div>
+
+              </div>
+            </div>
         </div>
         <div className="info2">
             <h4>Licensing</h4>

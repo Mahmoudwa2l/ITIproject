@@ -1,0 +1,42 @@
+.cart-card {
+    height: 400px;
+    max-width: 400px; /* Set a maximum width */
+    width: 100%; /* Allow the card to shrink to the available width */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+  }
+  
+  @media (max-width: 1078px) {
+    /* Add additional styling for screens less than 768px wide */
+    .cart-card {
+      max-width: 90%; /* Allow the card to take up the full width on smaller screens */
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 20px;
+    }
+    
+  }
+  
+  .cart-card-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+.cartcardrow1{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.cartcardrow2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(58, 58, 58);
+    margin-top: 20px;
+}

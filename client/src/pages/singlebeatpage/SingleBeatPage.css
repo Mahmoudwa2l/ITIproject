@@ -58,3 +58,8 @@
         margin-top: 10px; /* Further reduce margin for smaller screens */
     }
 }
+.imagesingle{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}

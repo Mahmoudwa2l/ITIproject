@@ -1,0 +1,94 @@
+.imagecart {
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+  }
+  .carttitle {
+    color: rgb(252, 249, 249);
+    font-size: 20px; /* Adjust font size for default (non-hover) state */
+  }
+  @media (max-width: 767px) {
+    /* Add additional styling for screens less than 768px wide */
+    .imagecart {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+      }
+    
+      .carttitle{
+        font-size: 15px;
+    }
+    .cartprice{
+        font-size: 18px;
+    }
+  }
+  .text-cart-color {
+    color: rgb(179, 172, 172);
+    font-size: 0.875rem; /* Adjust font size for small screens */
+  }
+  .text-license {
+    color: rgb(119, 119, 247);
+    font-size: 0.875rem; /* Adjust font size for small screens */
+  }
+
+  @media (max-width: 1569px) {
+    /* Add additional styling for screens less than 768px wide */
+   
+    .cartcard{
+        margin-bottom: 80px;
+    }
+  }
+  
+  @media (max-width: 436px) {
+    /* Add additional styling for screens less than 768px wide */
+    .text-cart-color{
+        font-size: 13px;
+    }
+    .text-license{
+        font-size: 12px;
+    }
+    
+  }
+
+  
+  .t {
+    width: 80%;
+  }
+  
+  .t2 {
+    width: 110%;
+  }
+  
+ 
+  
+  .carttitle:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-size: 1.5rem; /* Adjust font size for hover state */
+    cursor: pointer;
+  }
+  
+  .w {
+    width: 100%;
+    height: 200px;
+  }
+  
+  
+  
+  .x-cart-color {
+    color: rgb(179, 172, 172);
+  }
+  
+  .x-cart-color:hover {
+    cursor: pointer;
+    color: rgb(206, 199, 199);
+  }
+  
+  
+  
+  .text-license:hover {
+    color: rgb(146, 146, 245);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
