@@ -12,9 +12,11 @@ function BeatsCard({ beats ,addToCart }) {
     
   return (
     <>
-    <NavLink to="/beat" className="beatcard">
+    
     <div className="card-img-top">
-        <img className="card-img-top" src={PF + beats.img} alt="" />
+        <NavLink to="/beat" className="beatcard">
+          <img className="card-img-top" src={PF + beats.img} alt="" />
+        </NavLink>
         <div className="play-button-overlay d-flex align-items-center">
           <AudioPlayer music="assets/MARWAN_PABLO_-_RACORE.mp3"/>
         </div>
@@ -40,7 +42,7 @@ function BeatsCard({ beats ,addToCart }) {
 
 
 
-    </NavLink>
+   
       
       
     </>

@@ -1,4 +1,90 @@
+const Beat = require("../models/Beat");
+const {
+  verifyToken,
+  verifyTokenAndAuthorization,
+  verifyTokenAndAdmin,
+} = require("./verifyToken");
+
 const router = require("express").Router();
+
+//CREATE
+
+router.post("/", verifyTokenAndAdmin, async (req, res) => {
+  const newBeat = new Beat(req.body);
+
+  try {
+    const savedBeat = await newBeat.save();
+    res.status(200).json(savedBeat);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//UPDATE
+router.put("/:id", verifyTokenAndAdmin, async (req, res) => {
+  try {
+    const updatedBeat = await Beat.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
+    );
+    res.status(200).json(updatedBeat);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//DELETE
+router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
+  try {
+    await Beat.findByIdAndDelete(req.params.id);
+    res.status(200).json("Beat has been deleted...");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//GET Beat
+router.get("/find/:id", async (req, res) => {
+  try {
+    const Beat = await Beat.findById(req.params.id);
+    res.status(200).json(Beat);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//GET ALL Beat
+router.get("/", async (req, res) => {
+  const qNew = req.query.new;
+  const qCategory = req.query.category;
+  try {
+    let beats;
+
+    if (qNew) {
+      beats = await Beat.find().sort({ createdAt: -1 }).limit(1);
+    } else if (qCategory) {
+      beats = await Beat.find({
+        categories: {
+          $in: [qCategory],
+        },
+      });
+    } else {
+      beats = await Beat.find();
+    }
+
+    res.status(200).json(beats);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+module.exports = router;
+
+
+/* const router = require("express").Router();
 const Beat = require("../models/Beat");
 
 
@@ -84,4 +170,4 @@ router.get("/",async(req,res)=>{
     }
 })
 
-module.exports = router;
+module.exports = router; */
