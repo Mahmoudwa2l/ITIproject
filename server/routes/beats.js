@@ -49,8 +49,8 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 //GET Beat
 router.get("/find/:id", async (req, res) => {
   try {
-    const Beat = await Beat.findById(req.params.id);
-    res.status(200).json(Beat);
+    const beat = await Beat.findById(req.params.id);
+    res.status(200).json(beat);
   } catch (err) {
     res.status(500).json(err);
   }

@@ -14,7 +14,7 @@ function BeatsCard({ beats ,addToCart }) {
     <>
     
     <div className="card-img-top">
-        <NavLink to="/beat" className="beatcard">
+        <NavLink to={`/beat/${beats._id}`} className="beatcard">
           <img className="card-img-top" src={PF + beats.img} alt="" />
         </NavLink>
         <div className="play-button-overlay d-flex align-items-center">

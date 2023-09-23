@@ -9,8 +9,23 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const beatRoute = require("./routes/beats");
 const cartRoute = require("./routes/cart");
+const orderRoute = require("./routes/order");
 const multer = require("multer");
 const path = require("path");
+
+const cors = require('cors');
+
+
+// Allow requests from your frontend domain
+const corsOptions = {
+  origin: 'http://localhost:3000', // Replace with the actual URL of your frontend
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // This allows cookies to be sent cross-origin
+};
+
+app.use(cors(corsOptions));
+
+
 
 dotenv.config();
 mongoose.connect(process.env.MONGO_URL, {
@@ -62,7 +77,8 @@ app.post("/api/upload",upload.single("file") , (req,res) =>{
 app.use("/api/users" , userRoute);
 app.use("/api/auth" , authRoute);
 app.use("/api/beats" , beatRoute);
-app.use("/api/cart" , cartRoute);
+app.use("/api/carts" , cartRoute);
+app.use("/api/orders" , orderRoute);
 
 
 
