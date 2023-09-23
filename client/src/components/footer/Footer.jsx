@@ -109,11 +109,13 @@ function Footer({adminFooter}) {
               
               <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
                 {/* Social Media Icons */}  
-                <a href="mailto:ozone.studios.o3@gmail.com" className="btn btn-outline-light btn-floating m-1"><i className="bi bi-envelope"></i></a>
+                {/* <a href="mailto:ozone.studios.o3@gmail.com" className="btn btn-outline-light btn-floating m-1"><i className="bi bi-envelope"></i></a> */}
                 <a href="https://www.instagram.com/ozone3.studios/?igshid=MWZjMTM2ODFkZg%3D%3D" className="btn btn-outline-light btn-floating m-1"><i className="bi bi-instagram"></i></a>
                 <a href="https://www.tiktok.com/@ozone.studios?_t=8fKqYRVh59B&_r=1" className="btn btn-outline-light btn-floating m-1"><i className="bi bi-tiktok"></i></a>
                 <a href="https://open.spotify.com/playlist/6R3mDubv7PPcmT9GyriqRh?si=hcaPCt_4TDiIvO7TEOYgPQ " className="btn btn-outline-light btn-floating m-1"><i className="bi bi-spotify"></i></a>
                 <a href="https://www.google.com/maps?q=Ozone+Studios,+Al+Basatin+Al+Gharbeyah,+El+Basatin,+Cairo+Governorate+4234205+New,+Maadi,+Cairo+Governorate+11728&ftid=0x145839f84437301f:0xb4717a33e37f30e&hl=en&gl=us&entry=gps&lucs=,47071704&g_ep=CAISBjYuNzkuMxgAINeCAyoJLDQ3MDcxNzA0QgJFRw%3D%3D&g_st=ic" className="btn btn-outline-light btn-floating m-1"><i className="bi bi-geo-alt"></i></a>
+                <a href="tel:+1234567890" className="btn btn-outline-light btn-floating m-1"><i className="bi bi-phone"></i></a>
+
               </div>
               {/* Grid column */}
             </div>
