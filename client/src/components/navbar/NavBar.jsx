@@ -1,5 +1,14 @@
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import Badge from '@mui/material/Badge';
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import {useSelector} from "react-redux";
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+import { deepOrange } from '@mui/material/colors';
 
 function NavBar({ adminnavbar }) {
   const AdminNavBar = () => {
@@ -7,6 +16,17 @@ function NavBar({ adminnavbar }) {
   };
 
   const HomeNavBar = () => {
+    const StyledBadge = styled(Badge)(({ theme }) => ({
+      '& .MuiBadge-badge': {
+        right: -3,
+        top: 12,
+        border: `2px solid ${theme.palette.background.paper}`,
+        padding: '0 4px',
+        
+      },
+    }));
+  const quantity = useSelector(state=>state.cart.quantity)
+  console.log(quantity);
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark navbar-bg">
@@ -84,12 +104,20 @@ function NavBar({ adminnavbar }) {
                 <NavLink className="btn  signup" to="/singin">
                   Sign up
                 </NavLink>
-                <NavLink className="btn  ms-2 colo" to="/singin">
+                <NavLink className="btn  ms-2 me-4 colo" to="/singin">
                   Login
                 </NavLink>
+                <Stack className="me-3" direction="row" spacing={2}>
+    
+                  <Avatar src="/broken-image.jpg" />
+              </Stack>
                 <div className="dropdown">
                   <NavLink to="/cart">
-                    <i className="bi bi-cart cart"></i>
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={quantity} color="primary">
+                      <ShoppingCartIcon className="cartcolor"/>
+                    </StyledBadge>
+                  </IconButton>
                   </NavLink>
                   
                   <div className="dropdown-content bg-dark text-white">

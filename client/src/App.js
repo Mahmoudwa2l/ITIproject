@@ -6,7 +6,7 @@ import {
   PricingPage,
   SignIn,
   Checkout,
-  /* PageNotFound, */
+  PageNotFound,
   AboutPage,
   BeatsPage,
   Cart,
@@ -43,10 +43,11 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/cart" element={<Cart />} /> 
-          {/* <Route path="*" element={<PageNotFound />} /> */}
+          
           <Route path="/beat/:id" element={<SingleBeatPage />} />
         </Route>
         <Route path="/singin" element={<SignIn />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   );

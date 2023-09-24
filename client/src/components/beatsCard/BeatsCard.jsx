@@ -7,9 +7,17 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import AudioPlayer from "../audioplayer/AudioPlayer"; */
 import { NavLink } from 'react-router-dom';
 import AudioPlayer from "../audioplayer/AudioPlayer";
+import {addBeat} from "../../redux/cartRedux";
+import {useDispatch} from "react-redux";
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 function BeatsCard({ beats ,addToCart }) {
+  const dispatch = useDispatch();
+  const hanldeClick = () =>{
     
+    // Update cart and set isClicked to true
+    dispatch(addBeat({ beats }));
+  
+  };
   return (
     <>
     
@@ -24,7 +32,7 @@ function BeatsCard({ beats ,addToCart }) {
       <div className="card-body text-white">
         <div className="price d-flex flex-row justify-content-between align-items-center">
             <h6 className='mt-2'>$ {beats.price} </h6>
-            <i class="bi bi-bag-plus cartplus " onClick={() => addToCart(beats)}></i>
+            <i class="bi bi-bag-plus cartplus " onClick={hanldeClick}></i>
 
         </div>
         <h6 className="card-title track-title">{beats.title}</h6>

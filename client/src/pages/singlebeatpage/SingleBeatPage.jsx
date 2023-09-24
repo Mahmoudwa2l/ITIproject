@@ -2,14 +2,19 @@ import "./SingleBeatPage.css";
 import { BeatsCard } from "../../components/index";
 import { publicRequest } from "../../requestapi";
 import { useEffect, useState } from "react";
+import {useSelector} from "react-redux";
+import {addBeat} from "../../redux/cartRedux";
+import {useDispatch} from "react-redux";
 /* import axios from "axios"; */
 import {useLocation} from "react-router-dom";
+
 const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 function SingleBeatPage() {
   const [beats, setBeats] = useState([]);
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const [beat,setBeat] = useState({});
+  const dispatch = useDispatch();
 
   useEffect(()=>{
     const getBeat = async ()=>{
@@ -32,6 +37,16 @@ function SingleBeatPage() {
     };
     fetchBeats();
   }, []);
+
+  const hanldeClick = () =>{
+    
+      // Update cart
+      dispatch(addBeat({ beat ,price:beat.price}));
+    
+    
+  };
+  const cart = useSelector(state=>state.cart)
+  console.log(cart);
   return (
     <div className="contaier-fluid custom-pad pt-4 wrapper1">
       <div className="leftbeatinfo text-center">
@@ -47,7 +62,7 @@ function SingleBeatPage() {
               <h5 className="me-3 pricecart">Price : {beat.price} $</h5>
               <div className="cart1 text-white  p-2">
                 <i class="bi bi-cart-plus-fill me-2 fs-4"></i>
-                <span className="addtocart mt-1">Add to Cart</span>
+                <span className="addtocart mt-1" onClick={hanldeClick} >Add to Cart</span>
               </div>
             </div>
           </div>

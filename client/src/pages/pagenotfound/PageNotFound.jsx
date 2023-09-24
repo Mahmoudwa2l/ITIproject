@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./PageNotFound.css";
 function PageNotFound() {
   return (
-    <div className="pt-5 notfound">
+    <div className="pt-5 p-5 mb-5 notfound">
       <div class="container text-center">
         <div class="brand p-5">
           <span class="glyphicon glyphicon-king" aria-hidden="true"></span>
