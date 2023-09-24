@@ -1,6 +1,6 @@
 import "./CartItem.css";
-
-function CartItem() {
+const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+function CartItem({beats}) {
   return (
     <div className="d-flex flex-row cartcard">
       <div className="d-flex flex-column w">
@@ -10,14 +10,14 @@ function CartItem() {
         </div>
 
         <div className="d-flex flex-row">
-          <img className="imagecart me-3" src="assets/MATADOR.png" alt="" />
+          <img className="imagecart me-3" src={PF + beats.img} alt="" />
           <div className="d-flex flex-column t">
           <div className="d-flex flex-column flex-md-row justify-content-between">
-            <h6 className="carttitle">XXXTentacion x NF Type Beat - "Slow Talk"</h6>
-            <h5 className="cartprice text-white fs-sm">$99.95</h5>
+            <h6 className="carttitle">{beats.title}</h6>
+            <h5 className="cartprice text-white fs-sm">{beats.price} EGP</h5>
           </div>
             <div className="d-flex flex-row text-white t2 justify-content-between align-items-center">
-              <span className="text-cart-color fs-sm">Track 99$ UNLIMITED + 100% ROYALTIES BELONG TO THE ARTIST (WAV,MP3,Track Stems)</span>
+              <span className="text-cart-color fs-sm">{beats.author}</span>
               <i className="bi bi-x fs-2 ms-4 x-cart-color"></i>
             </div>
             <div className="d-flex flex-row text-white justify-content-between">

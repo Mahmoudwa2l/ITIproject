@@ -9,6 +9,7 @@ const cartSlice = createSlice({
     },
     reducers:{
         addBeat:(state,action)=>{
+            
             state.quantity += 1;
             state.beats.push(action.payload.beat);
             state.total += action.payload.price;

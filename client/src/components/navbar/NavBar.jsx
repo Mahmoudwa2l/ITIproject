@@ -8,7 +8,6 @@ import {useSelector} from "react-redux";
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
-import { deepOrange } from '@mui/material/colors';
 
 function NavBar({ adminnavbar }) {
   const AdminNavBar = () => {
@@ -111,7 +110,7 @@ function NavBar({ adminnavbar }) {
     
                   <Avatar src="/broken-image.jpg" />
               </Stack>
-                <div className="dropdown">
+                
                   <NavLink to="/cart">
                   <IconButton aria-label="cart">
                     <StyledBadge badgeContent={quantity} color="primary">
@@ -120,11 +119,8 @@ function NavBar({ adminnavbar }) {
                   </IconButton>
                   </NavLink>
                   
-                  <div className="dropdown-content bg-dark text-white">
-                    <p>Cart is empty</p><br />
-                    {/* <p>When you add somthing it will appear here</p> */}
-                  </div>
-                </div>
+                  
+               
                 
               </form>
             </div>

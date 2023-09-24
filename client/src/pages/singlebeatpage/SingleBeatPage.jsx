@@ -16,6 +16,7 @@ function SingleBeatPage() {
   const [beat,setBeat] = useState({});
   const dispatch = useDispatch();
 
+  
   useEffect(()=>{
     const getBeat = async ()=>{
       try{
