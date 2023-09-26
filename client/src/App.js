@@ -1,4 +1,4 @@
-import { Outlet, Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Home,
@@ -11,7 +11,7 @@ import {
   BeatsPage,
   Cart,
   SingleBeatPage,
-} from "./pages/index"; // Import your pages
+} from "./pages/index";
 import { Footer, NavBar } from "./components";
 
 const queryClient = new QueryClient();
@@ -29,8 +29,7 @@ function Layout({ children }) {
 }
 
 function App() {
-   // Initialize the cart state here
-
+  const user = false; // You can replace this with your actual user authentication logic
   return (
     <>
       <Routes>
@@ -39,14 +38,17 @@ function App() {
           <Route path="/projects" element={<ProjectPage />} />
           <Route path="/beats" element={<BeatsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
-          
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/cart" element={<Cart />} /> 
-          
+          <Route path="/cart" element={<Cart />} />
           <Route path="/beat/:id" element={<SingleBeatPage />} />
+          {/* Remove the extra closing </Route> tag */}
         </Route>
-        <Route path="/singin" element={<SignIn />} />
+        {/* Use Navigate for redirection */}
+        <Route
+          path="/signin"
+          element={user ? <Navigate to="/" /> : <SignIn />}
+        />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

@@ -100,10 +100,10 @@ function NavBar({ adminnavbar }) {
                 </li>
               </ul>
               <form className="d-flex">
-                <NavLink className="btn  signup" to="/singin">
+                <NavLink className="btn  signup" to="/signin">
                   Sign up
                 </NavLink>
-                <NavLink className="btn  ms-2 me-4 colo" to="/singin">
+                <NavLink className="btn  ms-2 me-4 colo" to="/signin">
                   Login
                 </NavLink>
                 <Stack className="me-3" direction="row" spacing={2}>
