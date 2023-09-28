@@ -28,6 +28,7 @@ router.post("/register", async (req, res) => {
           const user = await User.findOne(
               {
                   username: req.body.username
+                  
               }
           );
 
@@ -47,6 +48,7 @@ router.post("/register", async (req, res) => {
          // Check if the entered password doesn't match the stored hashed password
         if (originalPassword !== req.body.password) {
             return res.status(401).json("Wrong username or password");
+           
         }
   
   
@@ -61,6 +63,7 @@ router.post("/register", async (req, res) => {
     
           const { password, ...others } = user._doc;  
           res.status(200).json({...others, accessToken});
+         
   
       }catch(err){
           res.status(500).json(err);

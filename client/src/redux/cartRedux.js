@@ -13,6 +13,8 @@ const cartSlice = createSlice({
             state.quantity += 1;
             state.beats.push(action.payload.beat);
             state.total += action.payload.price;
+
+            
         },
     },
 });

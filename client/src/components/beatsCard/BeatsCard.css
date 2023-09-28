@@ -23,3 +23,23 @@
 .beatcard{
     text-decoration: none;
 }
+/* Define the pop-up animation */
+.pop-up {
+    display: none;
+    position: absolute;
+    top: 10;
+    margin-left: 110px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Apply animation when .pop-up-animation is added */
+  .pop-up.pop-up-animation {
+    display: block;
+    transform: scale(1);
+  }
+  

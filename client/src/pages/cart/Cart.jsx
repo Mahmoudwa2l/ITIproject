@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 function Cart() {
   const cart = useSelector(state=>state.cart);
   return (
-  <div className='container-fluid bg-customdark custom-pad'>
+  <div className='container-fluid bg-customdark custom-pad extrapad'>
   <h2 className='p-5 text-white'>Cart</h2>
   <div className="row">
     <div className="col-lg-6 carts">

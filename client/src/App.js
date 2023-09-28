@@ -1,5 +1,6 @@
 import { Outlet, Route, Routes, Navigate } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {useSelector} from 'react-redux';
 import {
   Home,
   ProjectPage,
@@ -27,23 +28,37 @@ function Layout({ children }) {
     </>
   );
 }
+function Layout2({ children }) {
+  return (
+    <>
+      <NavBar />
+      <QueryClientProvider client={queryClient}>
+        {children}
+      </QueryClientProvider>
+    </>
+  );
+}
 
 function App() {
-  const user = false; // You can replace this with your actual user authentication logic
+  const user = useSelector((state) => state.user.currentUser);
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout><Outlet /></Layout>}>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<ProjectPage />} />
-          <Route path="/beats" element={<BeatsPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/cart" element={<Cart />} />
+          
           <Route path="/beat/:id" element={<SingleBeatPage />} />
-          {/* Remove the extra closing </Route> tag */}
         </Route>
+
+        <Route path="/" element={<Layout2><Outlet /></Layout2>}>
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/beats" element={<BeatsPage />} />
+        </Route>
+
         {/* Use Navigate for redirection */}
         <Route
           path="/signin"

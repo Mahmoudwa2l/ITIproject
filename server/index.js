@@ -16,9 +16,8 @@ const path = require("path");
 const cors = require('cors');
 
 
-// Allow requests from your frontend domain
 const corsOptions = {
-  origin: 'http://localhost:3000', // Replace with the actual URL of your frontend
+  origin: ['http://localhost:3000', 'http://localhost:3001'], 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // This allows cookies to be sent cross-origin
 };
