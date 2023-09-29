@@ -40,11 +40,12 @@ function Beats() {
 
         <div className="container-lg scrollmenu">
           {beats.map((b) => (
-            <div className="card musiccardwidth1">
-              <BeatsCard key={b.id} beats={b}  addToCart={addToCart} />
+            <div className="card musiccardwidth1" key={b._id}>
+              <BeatsCard beats={b} addToCart={addToCart} />
             </div>
           ))}
         </div>
+
        
       </div>
     </div>

@@ -22,7 +22,7 @@ function BeatsPage() {
       <div className="row">
         <div className="d-flex flex-column">
           {beats.map((b) => (
-            <BeatsCardListed beats={b} />
+            <BeatsCardListed key={b._id} beats={b} />
           ))}
 
 

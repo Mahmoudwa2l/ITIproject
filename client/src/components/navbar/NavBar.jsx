@@ -6,8 +6,8 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {useSelector} from "react-redux";
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+/* import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack'; */
 
 function NavBar({ adminnavbar }) {
   const AdminNavBar = () => {
@@ -99,17 +99,14 @@ function NavBar({ adminnavbar }) {
                   </NavLink>
                 </li>
               </ul>
-              <form className="d-flex">
+              <div className="d-flex flex-row align-items-center">
                 <NavLink className="btn  signup" to="/signin">
                   Sign up
                 </NavLink>
                 <NavLink className="btn  ms-2 me-4 colo" to="/signin">
                   Login
                 </NavLink>
-                <Stack className="me-3" direction="row" spacing={2}>
-    
-                  <Avatar src="/broken-image.jpg" />
-              </Stack>
+                <i className="bi bi-person-circle fs-2 me-2 cartcolor"></i>
                 
                   <NavLink to="/cart">
                   <IconButton aria-label="cart">
@@ -122,7 +119,7 @@ function NavBar({ adminnavbar }) {
                   
                
                 
-              </form>
+              </div>
             </div>
           </div>
         </nav>

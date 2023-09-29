@@ -10,24 +10,9 @@ import {
   
 } from "../../sections/index";
 
-function Home({adminhome}) {
-
-
-  const AdminHome = () => {
-    return (
-      <div className="main">
-        Hello home
-        
-        
-       
-      </div>
-    );
-  };
-
-  const UserHome = () => {
-    return (
-      <>
-    
+function Home() {
+  return (
+    <>
       <Hero />
       <Projects />
       <Pricing />
@@ -35,13 +20,6 @@ function Home({adminhome}) {
       <Features />
       <About />
       <Contact />
-     
-    </>
-    );
-  };
-  return (
-    <>
-      {adminhome ? <AdminHome /> : <UserHome />}
     </>
   );
 }

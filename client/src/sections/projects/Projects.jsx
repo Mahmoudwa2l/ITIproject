@@ -13,12 +13,13 @@ function Projects() {
         </div>
 
         <div className="container-lg scrollmenu">
-          {tracks.map((t) => (
-            <div className="card musiccardwidth1 ms-2 mt-2 ">
-              <MusicCard track={t} />
-            </div>
-          ))}
-        </div>
+  {tracks.map((t) => (
+    <div className="card musiccardwidth1 ms-2 mt-2" key={t.id}> {/* Replace 'id' with the actual unique identifier in your data */}
+      <MusicCard track={t} />
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
   );

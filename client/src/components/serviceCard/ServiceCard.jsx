@@ -4,7 +4,7 @@ function ServiceCard(props) {
   return (
     <div className="feature col text">
           <div className="feature-icon bg-primary bg-gradient">
-          <i class={` icon ${props.myClassName}`}></i>
+          <i className={` icon ${props.myClassName}`}></i>
           </div>
           <h3>{props.title}</h3>
           <p className='para'>

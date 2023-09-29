@@ -9,6 +9,7 @@ import photo4 from 'http://localhost:3000/assets/MATADOR.png'; */
 
 export const tracks = [
   {
+    id:1,
     photo: 'assets/burhan-final23.jpg',
     song:'Ana b3eed',
     artist: 'Burhan',
@@ -17,6 +18,7 @@ export const tracks = [
     linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
   },
   {
+    id:2,
     photo: 'assets/Untitled_312.png',
     song:'Ana b3eed',
     artist: 'Selta',
@@ -25,6 +27,7 @@ export const tracks = [
     linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
   },
   {
+    id:3,
     photo: 'assets/marseille.png',
     song:'Ana b3eed',
     artist: 'Burhan',
@@ -33,6 +36,7 @@ export const tracks = [
     linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
   },
   {
+    id:4,
     photo:'assets/MATADOR.png',
     song:'Ana b3eed',
     artist: 'Burhan',
@@ -41,6 +45,7 @@ export const tracks = [
     linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
   },
   {
+    id:5,
     photo:'assets/MATADOR.png',
     song:'Ana b3eed',
     artist: 'Burhan',
@@ -49,6 +54,7 @@ export const tracks = [
     linkanghami: 'https://open.spotify.com/track/4gpLNH00UfTMeHRQE1HWRI?si=ece137b2f98c49fe',
   },
   {
+    id:6,
     photo:'assets/MATADOR.png',
     song:'Ana b3eed',
     artist: 'Burhan',
