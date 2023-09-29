@@ -5,8 +5,13 @@ function CartItem({beats}) {
     <div className="d-flex flex-row cartcard">
       <div className="d-flex flex-column w">
         <div className="text-white d-flex flex-row justify-content-between mb-4">
-          <div className="icon">test1</div>
-          <div className="noitems">test2</div>
+          <div className="d-flex flex-row align-items-center">
+            <i class="bi bi-person-circle color"></i>
+            <span className="ms-2 color">{beats.author}</span>
+
+          </div>
+        
+        <div className="noitems color">1 item: {beats.price} EGP</div>
         </div>
 
         <div className="d-flex flex-row">

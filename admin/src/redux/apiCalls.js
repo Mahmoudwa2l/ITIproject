@@ -15,10 +15,6 @@ import {
   addProductStart,
   addProductSuccess,
 } from "./beatRedux";
-function MyComponent() {
-  const history = useHistory();
-  history.push("/");
-}
 export const login = async (dispatch, user) => {
   dispatch(loginStart());
   try {

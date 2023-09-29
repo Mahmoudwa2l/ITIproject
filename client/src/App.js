@@ -41,13 +41,14 @@ function Layout2({ children }) {
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
+ /*  const readuser = user ? user : false; */
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout><Outlet /></Layout>}>
           <Route path="/" element={<Home />} />
           <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/checkout" element={<Checkout />} />
+          
           <Route path="/about" element={<AboutPage />} />
           
           <Route path="/beat/:id" element={<SingleBeatPage />} />
@@ -64,6 +65,7 @@ function App() {
           path="/signin"
           element={user ? <Navigate to="/" /> : <SignIn />}
         />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

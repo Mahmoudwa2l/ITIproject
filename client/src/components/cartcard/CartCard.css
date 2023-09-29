@@ -1,5 +1,5 @@
 .cart-card {
-    height: 400px;
+    height: auto;
     max-width: 400px; /* Set a maximum width */
     width: 100%; /* Allow the card to shrink to the available width */
     border-radius: 10px;
@@ -39,4 +39,72 @@
     justify-content: space-between;
     border-bottom: 1px solid rgb(58, 58, 58);
     margin-top: 20px;
+}
+.sharecart{
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+.sharecartbutton:hover{
+  background-color: #424141;
+}
+.shareicone{
+  margin-left: 10px;
+  font-size: 15px;
+}
+.sharecartbutton{
+  border-radius: 8px;
+  padding: 10px 20px 10px 20px;
+  background-color: #262626;
+  font-size: 15px;
+  font-weight: bold;
+}
+.incart{
+  border-bottom: #4d4848 solid 1px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+.subtotal{
+  color: rgb(163, 151, 151);
+  font-size: 15px;
+}
+.ServiceFee{
+  color: rgb(163, 151, 151);
+  font-size: 15px;
+
+}
+.total{
+  margin-top: 10px;
+}
+.cartcardbutton{
+  margin-top: 25px;
+  width: 100%;
+  justify-content: center;
+}
+
+.policy{
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  
+}
+.policycolor{
+  color: rgb(163, 151, 151);
+  
+}
+.checkoutbutton{
+  border-radius: 10px;
+  border: none;
+  background-color: #005FF8;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Maven Pro', sans-serif;
+}
+.checkoutbutton:hover{
+ 
+  background-color: #0958d6;
 }
